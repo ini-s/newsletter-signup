@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@types/validator": "^13.11.7",
 		"react-email-validator": "^1.0.2"
 	}
 }
