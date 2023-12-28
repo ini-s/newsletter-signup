@@ -1,8 +1,6 @@
 <script lang="ts">
 	import './global.css';
 
-	import validator from 'validator';
-
 	import SuccessModal from '$lib/components/success-modal.svelte';
 
 	let errorMessage = false;
