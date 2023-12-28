@@ -6,6 +6,7 @@
 	let errorMessage = false;
 	let showSuccessMessage = false;
 	let email = '';
+	let isValidEmail = false;
 
 	const errorStyle = `
 		border: errorMessage ? '1.5px solid hsl(4, 100%, 67%)' : '1.5px solid hsl(231, 7%, 60%)',
@@ -14,7 +15,9 @@
 	`;
 
 	function validateEmail() {
-		validator.isEmail(email) ? (errorMessage = false) : (errorMessage = true);
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+		isValidEmail = emailRegex.test(email) ? (errorMessage = false) : (errorMessage = true);
 	}
 
 	function openModal() {
